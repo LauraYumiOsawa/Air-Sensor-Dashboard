@@ -98,7 +98,7 @@ export default function App() {
       {error && (
         <div className="alert-error">
           ⚠️ {error} — verifique se o AirSensorAI está rodando em{' '}
-          <code>AIR-SENSOR-API</code>
+          <code>AIR_SENSOR_API</code>
         </div>
       )}
 

@@ -12,7 +12,7 @@ A React frontend dashboard for monitoring air sensor data (temperature and humid
 ## Architecture
 
 - Frontend only — no backend in this repo
-- API calls are proxied via Vite's dev server to an external backend: `AIR-SENSOR-API`
+- API calls are proxied via Vite's dev server to an external backend: `AIR_SENSOR_API`
 - Data fetched from `/api/DHT` endpoint (Firebase-backed)
 
 ## Key Files

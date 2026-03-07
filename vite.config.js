@@ -9,7 +9,7 @@ export default defineConfig({
     allowedHosts: 'all',
     proxy: {
       '/api': {
-        target: 'AIR-SENSOR-API',
+        target: 'AIR_SENSOR_API',
         changeOrigin: true,
         secure: false,
       },
