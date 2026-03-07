@@ -11,6 +11,7 @@ export default defineConfig({
       '/api': {
         target: 'AIR-SENSOR-API',
         changeOrigin: true,
+        secure: false,
       },
     },
   },
