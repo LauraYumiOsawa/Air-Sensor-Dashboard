@@ -1,7 +1,13 @@
 const API_BASE = 'https://air-sensor-ai--leticia-hub.replit.app/api'
 
 export async function fetchReadings() {
-  const res = await fetch(`${API_BASE}/DHT`)
+  const res = await fetch(`${API_BASE}/DHT`, {
+    method: 'GET',
+    mode: 'cors',
+    headers: {
+      'Accept': 'application/json',
+    }
+  })
   if (!res.ok) throw new Error(`Erro ao buscar leituras: ${res.status}`)
   const data = await res.json()
 
@@ -16,7 +22,11 @@ export async function fetchReadings() {
 export async function postReading(reading) {
   const res = await fetch(`${API_BASE}/DHT`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
+    mode: 'cors',
+    headers: { 
+      'Content-Type': 'application/json',
+      'Accept': 'application/json',
+    },
     body: JSON.stringify(reading),
   })
   if (!res.ok) throw new Error(`Erro ao enviar leitura: ${res.status}`)
