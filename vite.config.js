@@ -11,6 +11,8 @@ export default defineConfig({
       '/api': {
         target: 'AIR_SENSOR_API',
         changeOrigin: true,
+        secure: false,
+        rewrite: (path) => path.replace(/^\/api/, ''),
       },
     },
   },

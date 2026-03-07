@@ -35,6 +35,6 @@ externalPort = 80
 
 [deployment]
 deploymentTarget = "cloudrun"
-build = ["sh", "-c", "npm run dev"]
+build = ["sh", "-c", "npm run build"]
 publicDir = "dist/public"
-run = ["sh", "-c", "npx serve -l 5000 dist"]
+run = ["sh", "-c", "npx serve dist -s"]
