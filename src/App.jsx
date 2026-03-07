@@ -98,7 +98,7 @@ export default function App() {
       {error && (
         <div className="alert-error">
           ⚠️ {error} — verifique se o AirSensorAI está rodando em{' '}
-          <code>https://air-sensor-ai--leticia-hub.replit.app</code>
+          <code>AIR-SENSOR-API</code>
         </div>
       )}
 
