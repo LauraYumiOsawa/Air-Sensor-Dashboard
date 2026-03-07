@@ -1,4 +1,4 @@
-const API_BASE = '/api'
+const API_BASE = 'https://air-sensor-ai--leticia-hub.replit.app/api'
 
 export async function fetchReadings() {
   const res = await fetch(`${API_BASE}/DHT`)
