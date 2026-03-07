@@ -9,7 +9,7 @@ export default defineConfig({
     allowedHosts: 'all',
     proxy: {
       '/api': {
-        target: 'AIR_SENSOR_API',
+        target: 'https://air-sensor-ai--leticia-hub.replit.app',
         changeOrigin: true,
         secure: false,
         rewrite: (path) => path.replace(/^\/api/, ''),
