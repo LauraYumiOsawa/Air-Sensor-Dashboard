@@ -65,7 +65,12 @@ export default function App() {
           </div>
         </div>
         <div className="header-right">
-          <StatusBadge error={error} loading={loading} lastUpdated={lastUpdated} />
+          <StatusBadge
+            error={error}
+            loading={loading}
+            lastUpdated={lastUpdated}
+            totalReadings={readings.length}
+          />
           <button
             className="btn-refresh"
             onClick={() => {

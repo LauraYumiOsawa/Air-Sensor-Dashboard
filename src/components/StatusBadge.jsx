@@ -1,4 +1,4 @@
-export default function StatusBadge({ error, loading, lastUpdated }) {
+export default function StatusBadge({ error, loading, lastUpdated, totalReadings = 0 }) {
   if (error) {
     return <span className="badge badge-error">● Desconectado</span>
   }
@@ -7,7 +7,7 @@ export default function StatusBadge({ error, loading, lastUpdated }) {
   }
   return (
     <span className="badge badge-ok" title={lastUpdated?.toLocaleString('pt-BR')}>
-      ● Online
+      ● Online | {totalReadings} leituras
     </span>
   )
 }
