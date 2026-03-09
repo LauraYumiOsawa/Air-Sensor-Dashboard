@@ -102,31 +102,6 @@ export default function App() {
         </div>
       )}
 
-      {latest && (
-        <section className="kpi-grid">
-          <div className="kpi-card">
-            <span className="kpi-label">Última Leitura</span>
-            <span className="kpi-value">{new Date(latest.Timestamp * 1000).toLocaleString('pt-BR')}</span>
-          </div>
-          <div className="kpi-card accent-green">
-            <span className="kpi-label">Temperatura</span>
-            <span className="kpi-value">{latest.Temperature?.toFixed(1)} °C</span>
-          </div>
-          <div className="kpi-card accent-blue">
-            <span className="kpi-label">Umidade (%)</span>
-            <span className="kpi-value">{latest.Humidity?.toFixed(1)}%</span>
-          </div>
-          <div className="kpi-card accent-purple">
-            <span className="kpi-label">Dispositivo</span>
-            <span className="kpi-value device-id">{latest.DeviceId}</span>
-          </div>
-          <div className="kpi-card">
-            <span className="kpi-label">Total de Leituras</span>
-            <span className="kpi-value">{readings.length}</span>
-          </div>
-        </section>
-      )}
-
       {readings.length > 0 ? (
         <>
           <section className="section">
