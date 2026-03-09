@@ -52,6 +52,8 @@ export default function App() {
     return () => clearInterval(interval)
   }, [loadData])
 
+  const isOnline = !error && !(loading && !lastUpdated)
+
   return (
     <div className="app">
       <header className="header">
@@ -64,7 +66,7 @@ export default function App() {
         </div>
         <div className="header-right">
           <StatusBadge error={error} loading={loading} lastUpdated={lastUpdated} />
-          <span className="header-readings-count">Total: {readings.length} leituras</span>
+          {isOnline && <span className="header-readings-count">Total {readings.length}</span>}
           <button
             className="btn-refresh"
             onClick={() => {
