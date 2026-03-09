@@ -43,6 +43,12 @@ body {
 .header h1 { font-size: 1.6rem; font-weight: 700; color: #fff; }
 .header-subtitle { font-size: 0.85rem; color: var(--muted); margin-top: 2px; }
 .header-right { display: flex; align-items: center; gap: 12px; }
+.header-readings-count {
+  font-size: 0.78rem;
+  color: var(--muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
 
 .btn-refresh {
   background: var(--surface2);

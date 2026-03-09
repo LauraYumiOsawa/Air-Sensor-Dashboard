@@ -52,8 +52,6 @@ export default function App() {
     return () => clearInterval(interval)
   }, [loadData])
 
-  const latest = readings[readings.length - 1]
-
   return (
     <div className="app">
       <header className="header">
@@ -66,6 +64,7 @@ export default function App() {
         </div>
         <div className="header-right">
           <StatusBadge error={error} loading={loading} lastUpdated={lastUpdated} />
+          <span className="header-readings-count">Total: {readings.length} leituras</span>
           <button
             className="btn-refresh"
             onClick={() => {
@@ -104,13 +103,6 @@ export default function App() {
 
       {readings.length > 0 ? (
         <>
-        <section className="section">
-            <h2>Total de leituras</h2>
-            {latest && (
-                  <span className="kpi-value">{readings.length}</span>
-            )}
-
-          </section>
           <section className="section">
             <h2>Umidade ao Longo do Tempo</h2>
             <SensorChart readings={readings} />
