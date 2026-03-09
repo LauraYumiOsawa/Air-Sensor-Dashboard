@@ -50,6 +50,12 @@ body {
   white-space: nowrap;
 }
 
+.total-readings-inline {
+  font-size: 0.82rem;
+  color: var(--muted);
+  margin: -8px 0 18px;
+}
+
 .btn-refresh {
   background: var(--surface2);
   border: 1px solid var(--border);

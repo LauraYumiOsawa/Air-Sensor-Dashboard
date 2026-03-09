@@ -66,7 +66,6 @@ export default function App() {
         </div>
         <div className="header-right">
           <StatusBadge error={error} loading={loading} lastUpdated={lastUpdated} />
-          {isOnline && <span className="header-readings-count">Total {readings.length}</span>}
           <button
             className="btn-refresh"
             onClick={() => {
@@ -95,6 +94,8 @@ export default function App() {
           </button>
         </div>
       </header>
+
+      {isOnline && <div className="total-readings-inline">Total {readings.length}</div>}
 
       {error && (
         <div className="alert-error">
