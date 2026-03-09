@@ -55,9 +55,8 @@ body {
   color: var(--muted);
   margin: -8px 0 18px;
   text-align: right;
-  font-weight: 300; 
+  font-weight: 600; 
   text-transform: uppercase;
-  letter-spacing: 0.06em;
 }
 
 .btn-refresh {
