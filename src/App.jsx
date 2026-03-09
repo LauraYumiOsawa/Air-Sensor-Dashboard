@@ -65,12 +65,7 @@ export default function App() {
           </div>
         </div>
         <div className="header-right">
-          <StatusBadge
-            error={error}
-            loading={loading}
-            lastUpdated={lastUpdated}
-            totalReadings={readings.length}
-          />
+          <StatusBadge error={error} loading={loading} lastUpdated={lastUpdated} />
           <button
             className="btn-refresh"
             onClick={() => {
@@ -109,6 +104,18 @@ export default function App() {
 
       {readings.length > 0 ? (
         <>
+        <section className="section">
+            <h2>Total de leituras</h2>
+            {latest && (
+              <section className="kpi-grid">
+                <div className="kpi-card">
+                  <span className="kpi-label">Total de Leituras</span>
+                  <span className="kpi-value">{readings.length}</span>
+                </div>
+              </section>
+            )}
+
+          </section>
           <section className="section">
             <h2>Umidade ao Longo do Tempo</h2>
             <SensorChart readings={readings} />
