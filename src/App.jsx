@@ -107,12 +107,7 @@ export default function App() {
         <section className="section">
             <h2>Total de leituras</h2>
             {latest && (
-              <section className="kpi-grid">
-                <div className="kpi-card">
-                  <span className="kpi-label">Total de Leituras</span>
                   <span className="kpi-value">{readings.length}</span>
-                </div>
-              </section>
             )}
 
           </section>
