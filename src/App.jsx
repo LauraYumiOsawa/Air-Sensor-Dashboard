@@ -95,7 +95,7 @@ export default function App() {
         </div>
       </header>
 
-      {isOnline && <div className="total-readings-inline">Total {readings.length}</div>}
+      {isOnline && <div className="total-readings-inline">Total de leituras: {readings.length}</div>}
 
       {error && (
         <div className="alert-error">
